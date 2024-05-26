@@ -1,0 +1,21 @@
+.header {
+  margin: -8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: rgba(0, 128, 0, 0.712);
+  text-align: center;
+  border-bottom: solid green;
+}
+
+.search {
+  padding: 5px;
+  margin: 10px; 
+}
+
+.inputText {
+  padding: 6px;
+}
+
+.btnStyle {
+  padding: 5px;
+}
