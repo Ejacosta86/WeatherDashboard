@@ -10,7 +10,7 @@ click link to view [website](https://github.com/Ejacosta86/WeatherDashboard).
 
 ## Deployed Application
 
-click link to view [website]().
+click link to view [website](https://ejacosta86.github.io/WeatherDashboard/).
 
 
 ## Preview
