@@ -2,6 +2,7 @@ const weatherApi = '6133ca97111cde17d4a3ace8c5df4e43' //this is my API key
 const cardsContainer = document.getElementById('card');
 const todayContainer = document.getElementById('current');
 const forcastContainer = document.getElementById('forecast');
+const searchHistory = document.getElementById('historyList');
 
 
 
@@ -73,6 +74,7 @@ function current(city) {
 
     let currentData = {
         name: data.name,
+        date: data.main.date,
         temp: data.main.temp,
         humidity: data.main.humidity,
         wind: data.wind.speed,
@@ -122,6 +124,7 @@ function currentCard(currentData) {
   humidityEl.textContent = currentData.humidity + '%';
   iconEl.src = `http://openweathermap.org/img/w/${currentData.icon}.png`
 
+  
   nameEl.append(tempEl);
   nameEl.append(windEl);
   nameEl.append(humidityEl);
@@ -154,11 +157,21 @@ function forecastCard(forecastData) {
 }
 
 
-function showHistory(historyList) {
-  fetch(`http://api.openweathermap.org/data/2.5/forecast/?q=${city}&appid=${weatherApi}&units=imperial`, {
+// function showHistory(historyList) {
+//   fetch(`http://api.openweathermap.org/data/2.5/forecast/?q=${city}&appid=${weatherApi}&units=imperial`, {
 
-  })
-    .then(function (response){
-      return response.json();
-    })
-}
+//   })
+//     .then(function (response){
+//       return response.json();
+//     })
+// }
+// document.getElementById('submitBtn').addEventListener('click', function(event) {
+//   event.preventDefault();
+
+//   const city = document.getElementById('historyList').value;
+//   if (city) {
+//     addCityToHistory(city);
+//     saveToLocal(city);
+//     current(city);
+//     forecast(city); 
+//    } 
